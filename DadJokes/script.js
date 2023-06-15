@@ -23,9 +23,10 @@ let dadJokes = [
 
 let result = document.getElementById('joke');
 let generateBtn = document.getElementById('getJoke');
-let index = Math.floor(Math.random()*dadJokes.length);
+
 
 function tellMeAJoke() {
-    return result.innerHTML(dadJokes[index]);
+    let index = Math.floor(Math.random()*dadJokes.length);
+    result.innerText = dadJokes[index];
 }
 generateBtn.addEventListener('click',tellMeAJoke);
